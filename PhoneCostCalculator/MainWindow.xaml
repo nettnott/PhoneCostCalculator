@@ -1,0 +1,56 @@
+<Window x:Class="PhoneCostCalculator.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Стоимость телефонного разговора"
+        Height="300" Width="400"
+        ResizeMode="NoResize"
+        WindowStartupLocation="CenterScreen">
+    <Grid Margin="20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="180"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <!-- Длительность -->
+        <Label Grid.Row="0" Grid.Column="0" Content="Длительность (мин):" VerticalAlignment="Center" Margin="0,5"/>
+        <TextBox x:Name="txtDuration" Grid.Row="0" Grid.Column="1" Margin="0,5" Padding="4"/>
+
+        <!-- Цена -->
+        <Label Grid.Row="1" Grid.Column="0" Content="Цена (руб/мин):" VerticalAlignment="Center" Margin="0,5"/>
+        <TextBox x:Name="txtPrice" Grid.Row="1" Grid.Column="1" Margin="0,5" Padding="4"/>
+
+        <!-- День недели -->
+        <Label Grid.Row="2" Grid.Column="0" Content="День недели:" VerticalAlignment="Center" Margin="0,5"/>
+        <ComboBox x:Name="cboDayOfWeek" Grid.Row="2" Grid.Column="1" Margin="0,5" Padding="4">
+            <ComboBoxItem>Понедельник</ComboBoxItem>
+            <ComboBoxItem>Вторник</ComboBoxItem>
+            <ComboBoxItem>Среда</ComboBoxItem>
+            <ComboBoxItem>Четверг</ComboBoxItem>
+            <ComboBoxItem>Пятница</ComboBoxItem>
+            <ComboBoxItem>Суббота</ComboBoxItem>
+            <ComboBoxItem>Воскресенье</ComboBoxItem>
+        </ComboBox>
+
+        <!-- Кнопка -->
+        <Button x:Name="btnCalculate" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2"
+                Content="Вычислить" Margin="0,10" Padding="8,4"
+                Click="btnCalculate_Click"/>
+
+        <!-- Результат -->
+        <Label Grid.Row="4" Grid.Column="0" Content="Стоимость (руб):" VerticalAlignment="Center" Margin="0,5"/>
+        <TextBox x:Name="txtResult" Grid.Row="4" Grid.Column="1" Margin="0,5" Padding="4"
+                 IsReadOnly="True" Background="#F0F0F0"/>
+
+        <!-- Сообщение об ошибке -->
+        <TextBlock x:Name="txtError" Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="2"
+                   Foreground="Red" TextWrapping="Wrap" Margin="0,5"/>
+    </Grid>
+</Window>
