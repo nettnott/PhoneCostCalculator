@@ -10,6 +10,9 @@
 
 Приложение состоит из одной страницы MainWindow, на которой реализованы проверки правильности ввода инфомации пользователем. Рассчеты вынесены в отдельный класс CostCalculator с функцией Calculate.
 Отдельным проектом созданы автоматизированные тесты (файл CalculatorTests.cs), разработанные на основе тест-кейсов.
+<img width="488" height="371" alt="{570296E2-DA31-4BE0-A3B7-FCF5D59A3904}" src="https://github.com/user-attachments/assets/d749cc88-ffcd-4b79-a37a-626bbbdf2c92" />
+<img width="296" height="369" alt="{C817488A-8A86-40E5-8FD1-64B47E85BEA9}" src="https://github.com/user-attachments/assets/f8cf106a-f417-4455-8c1c-d05295d8426b" />
+
 
 ### Результат выполнения автоматизированных тестов
 
